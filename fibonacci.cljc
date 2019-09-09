@@ -34,6 +34,11 @@
 
 (defn compute
   [n]
-  (let [fib (map first (iterate (fn [[a b]] [b (+' a b)]) [0 1]))]
-    (nth fib n)))
+  (let ;local bind
+    [fib ;map result to this
+     (map
+       first ; (0 1 1 2) get only the first element of each list gen. by iterate
+       (iterate ;([0 1] [1 1] [1 2] [2 3]) lazy evalueted 
+                  (fn [[a b]] [b (+' a b)]) [0 1]))] ;lambda for creating the lazy eval. list
+    (nth fib n))) ;calculate the position of our lazy list to retrieve which will be equals to the arg of the func
 (println (time (fibonacciI/compute 25)))
