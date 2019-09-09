@@ -31,6 +31,15 @@ defmodule Fibonacci3 do #optimized func
   end
 end
 
+defmodule FibonacciI do
+  def compute(n) do
+    {0, 1}
+    |> Stream.iterate(fn {a, b} -> {b, a + b} end) #elixir iteration |> = pipe
+    |> Stream.map(&elem(&1,0)) #Stream.iterate({0, 1}, fn {a, b} -> {b, a + b} end) | & captures a function | &1 get the first args of a fun
+    |> Enum.at(n) #convert stream to list
+  end
+end
+
 IO.puts Fibonacci.compute(25)
 IO.puts Fibonacci2.compute(25)
 IO.puts Fibonacci3.compute(25)
