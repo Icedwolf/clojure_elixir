@@ -8,6 +8,7 @@
 Fibonacci	fibonacci.exs	/^defmodule Fibonacci do$/;"	m
 Fibonacci2	fibonacci.exs	/^defmodule Fibonacci2 do #more elixir like solution$/;"	m
 Fibonacci3	fibonacci.exs	/^defmodule Fibonacci3 do #optimized func$/;"	m
+FibonacciI	fibonacci.exs	/^defmodule FibonacciI do$/;"	m
 clojure_elixir	README.md	/^# clojure_elixir$/;"	c
 compute	fibonacci.cljc	/^(defn compute$/;"	f	namespace:fibonacci
 compute	fibonacci.cljc	/^(defn compute$/;"	f	namespace:fibonacci2
@@ -17,10 +18,12 @@ compute	fibonacci.exs	/^  def compute(0), do: 0$/;"	f	module:Fibonacci3	access:p
 compute	fibonacci.exs	/^  def compute(1), do: 1 # = 1 do this$/;"	f	module:Fibonacci2	access:public
 compute	fibonacci.exs	/^  def compute(1), do: 1$/;"	f	module:Fibonacci3	access:public
 compute	fibonacci.exs	/^  def compute(n) do # compute\/1$/;"	f	module:Fibonacci	access:public
+compute	fibonacci.exs	/^  def compute(n) do$/;"	f	module:FibonacciI	access:public
 compute	fibonacci.exs	/^  def compute(n), do: compute(n - 1) + compute(n - 2) # else$/;"	f	module:Fibonacci2	access:public
 compute	fibonacci.exs	/^  def compute(n), do: helper(n, 2, 1, 1)$/;"	f	module:Fibonacci3	access:public
 fibonacci	fibonacci.cljc	/^(ns fibonacci)$/;"	n
 fibonacci2	fibonacci.cljc	/^(ns fibonacci2)$/;"	n
 fibonacciI	fibonacci.cljc	/^(ns fibonacciI)$/;"	n
+hello-world	hello.cljc	/^(ns hello-world)$/;"	n
 helper	fibonacci.exs	/^  defp helper(n, current_index, current_value, _) #defp = private function | _ optional arg$/;"	f	module:Fibonacci3	access:private
 helper	fibonacci.exs	/^  defp helper(n, current_index, current_value, previous_value) do$/;"	f	module:Fibonacci3	access:private
