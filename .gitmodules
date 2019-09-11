@@ -1,0 +1,3 @@
+[submodule "elixerver"]
+	path = elixerver
+	url = https://github.com/Icedwolf/elixerver.git
